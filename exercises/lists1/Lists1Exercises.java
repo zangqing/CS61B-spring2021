@@ -4,7 +4,10 @@ public class Lists1Exercises {
       * to change. */
     public static IntList incrList(IntList L, int x) {
         /* Your code here. */
-        return L;        
+        if (L == null){
+            return null;
+        }
+        return new IntList(L.first+x, incrList(L.rest, x));
     }
 
     /** Returns an IntList identical to L, but with
@@ -12,7 +15,22 @@ public class Lists1Exercises {
       * the 'new' keyword. */
     public static IntList dincrList(IntList L, int x) {
         /* Your code here. */
+//        Method 1
+        //Here, p copies the reference of L
+        //So, changes in p will also apply for changes in L
+        IntList p = L;
+        while (p != null) {
+            p.first += x;
+            p = p.rest;
+        }
         return L;
+
+//        Method 2
+//        while (L != null) {
+//            L.first += x;
+//            L = L.rest;
+//        }
+//        return L;
     }
 
     public static void main(String[] args) {
@@ -27,7 +45,7 @@ public class Lists1Exercises {
         // code for incrList and dincrList into IntList.java and
         // run it in the visualizer.
         // System.out.println(L.get(1));
-        // System.out.println(incrList(L, 3));
+        //System.out.println(incrList(L, 3));
         // System.out.println(dincrList(L, 3));        
     }
 }
