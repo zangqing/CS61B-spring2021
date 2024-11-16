@@ -15,7 +15,6 @@ public class Lists1Exercises {
       * the 'new' keyword. */
     public static IntList dincrList(IntList L, int x) {
         /* Your code here. */
-//        Method 1
         //Here, p copies the reference of L
         //So, changes in p will also apply for changes in L
         IntList p = L;
@@ -25,12 +24,6 @@ public class Lists1Exercises {
         }
         return L;
 
-//        Method 2
-//        while (L != null) {
-//            L.first += x;
-//            L = L.rest;
-//        }
-//        return L;
     }
 
     public static void main(String[] args) {
