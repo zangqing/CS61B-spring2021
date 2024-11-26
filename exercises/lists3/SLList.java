@@ -27,7 +27,8 @@ public class SLList<LochNess> {
 
  	/** Returns the first item in the list. */
  	public LochNess getFirst() {
- 		return first.item; 		
+
+		 return first.item;
  	}
 
  	/** Adds an item to the end of the list. */
@@ -45,6 +46,12 @@ public class SLList<LochNess> {
  	}
 
  	public int size() {
- 		return size;
+
+		 return size;
  	}
+
+	 public static void main(String[] args) {
+		 SLList<String> s1 = new SLList<>("bone");
+		 s1.addFirst("thugs");
+	 }
 }
