@@ -76,7 +76,7 @@ public class IntListExercises {
         }
 
         boolean currElemIsPrime = Primes.isPrime(lst.first);
-        
+
         // Do recursion first to ensure the method won't quit
         // whenever currElemIsPrime is true.
         // Also, restHasPrime is true
